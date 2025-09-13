@@ -1,19 +1,9 @@
-import type {
-  Link,
-  PhotoData,
-  PhotosConfig,
-  PostConfig,
-  ProjectConfig,
-  Site,
-  SocialLink,
-  TagsConfig,
-} from '~/types'
+import type { Link, PhotoData, PhotosConfig, PostConfig, ProjectConfig, Site, SocialLink, TagsConfig } from '~/types'
 
 //--- About Page Config ---
 export const SITE: Site = {
   title: 'iiLoveYou',
-  description:
-    '一个简单而现代的博客,更重要的是,它仅仅是一个博客,不展示个人技能,项目，只展示日常生活的地方。',
+  description: '一个简单而现代的博客,更重要的是,它仅仅是一个博客,不展示个人技能,项目，只展示日常生活的地方。',
   website: 'https://tt.iiloveyou.org/',
   lang: 'zh',
   base: '/',
@@ -65,7 +55,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     name: 'github',
     url: 'https://github.com/ooroot',
     icon: 'icon-[ri--github-fill]',
-    count: 11,
   },
   {
     name: 'twitter',
@@ -131,7 +120,7 @@ export const PHOTOS_CONFIG: PhotosConfig = {
 
 export const PhotosList: PhotoData[] = [
   {
-    title: "撸猫毛",
+    title: '撸猫毛',
     icon: {
       type: 'emoji',
       value: '🌠',

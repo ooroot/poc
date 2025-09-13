@@ -7,9 +7,7 @@ import SocialLink from '~/components/base/SocialLink.astro'
 import List from '~/components/posts/card/List.astro'
 import { getNumPosts, getPinnedPosts } from '~/lib/data'
 
-
 const { size, type } = POSTS_CONFIG.homePageConfig
-
 
 let showPosts = []
 const pinnedPosts = await getPinnedPosts()
@@ -26,32 +24,27 @@ if (hasPinnedPosts) {
     <div class="py-8 pb-10 px-6 sm:px-8">
       <h1 class="flex flex-col gap-2">
         <span class="text-4xl sm:text-5xl tracking-tight"> About </span>
-        <span class="text-muted-foreground font-light text-xl sm:text-2xl block tracking-wide text-balance">
-          > Code多少钱一斤？
-        </span>
+        <span class="text-muted-foreground font-light text-xl sm:text-2xl block tracking-wide text-balance"> > Code多少钱一斤？ </span>
       </h1>
       <div class="text-muted-foreground text-pretty">
-        <br>
+        <br />
+        <p>一个简单而现代的博客,更重要的是,它仅仅是一个博客,不展示个人技能,项目，只展示日常生活的地方。</p>
+        <br />
         <p>
-          一个简单而现代的博客,更重要的是,它仅仅是一个博客,不展示个人技能,项目，只展示日常生活的地方。
+          没错充满叛逆，期间 Blogger Z-Blog mBlog WordPress Ghost Textpattern-CMS Typecho Hexo
+          Hugo各种换各种折腾，内容没写多少纯折腾。现在用 Github+<a href="https://astro.build/" rel="noopener noreferrer" target="_blank"
+            >Astro</a
+          > 回归淳朴。
         </p>
-        <br>
-        <p>
-          没错充满叛逆
-        </p>
-        <br>
-        <p>
-          发现也没啥可写的，履历太单一或者太波澜无从写起，随便写点内容作为页面填充吧，拼命敲...也没敲出几个字符
-        </p>
-        <br>
-        <p>
-          > 下面是社交平台
-        </p>
+        <br />
+        <p>发现也没啥可写的，履历太单一或者太波澜无从写起，随便写点内容作为页面填充吧，拼命敲...也没敲出几个字符</p>
+        <br />
+        <p>> 下面是社交平台</p>
       </div>
       <div class="mt-6 flex gap-6">
         {
           SOCIAL_LINKS.map((item) => {
-            return <SocialLink href={item.url} icon={item.icon} aria-label={`Link of ${item.name}`} count={item.count} label="followers" />
+            return <SocialLink href={item.url} icon={item.icon} aria-label={`Link of ${item.name}`} />
           })
         }
       </div>
