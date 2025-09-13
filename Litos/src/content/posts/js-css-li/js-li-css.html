@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>用JS+CSS的方法左右对齐的DIV列表</title>
+</head>
+<style>
+.code {font-family: "Verdana,宋体";color:#fff;border:solid #ff0000 1px;background: #333;margin:10px auto; overflow:hidden;}
+.box {font-family: "Verdana,宋体";font-size: 14px;color:#fff;border:solid #ff0000 1px;width:415px;background: #333;margin:0 auto; overflow:hidden;}
+ul{ padding:0; margin:0;}
+.box ul li {list-style:none;height:100px;width:100px;}
+.box ul li.left {background-color:#666; margin:0 5px 5px 0; float:left;}/* 左样式 */
+.box ul li.right {background-color:#999;margin:0 0 5px 0; float:right;}/* 右样式 */
+</style>
+<body>
+
+<div class="box" id="list">
+ <h2>效果显示</h2>
+ <ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+ </ul>
+</div>
+<script type="text/javascript">
+<!--
+var Ptr=document.getElementById("list").getElementsByTagName("li");
+function $() {
+      for (i=1;i<Ptr.length+1;i++) { 
+      Ptr[i-1].className = (i%4>0)?"left":"right"; 
+      }
+}
+window.onload=$;
+//-->
+</script>
+
+
+<div class="code">
+ <h2>源码显示</h2>
+ <xmp>
+<!-- CSS部分-->
+.box {font-family: "Verdana,宋体";font-size: 14px;color:#fff;border:solid #ff0000 1px;width:415px;background: #dedede;margin:0 auto; overflow:hidden;}
+ul{ padding:0; margin:0;}
+.box ul li {list-style:none;height:100px;width:100px;}
+.box ul li.left {background-color:#666; margin:0 5px 5px 0; float:left;}/* 左样式 */
+.box ul li.right {background-color:#999;margin:0 0 5px 0; float:right;}/* 右样式 */
+
+<!-- html部分-->
+<div class="box" id="list">
+ <ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+ </ul>
+</div>
+
+//JS部分
+<script type="text/javascript">
+<!--
+var Ptr=document.getElementById("list").getElementsByTagName("li");
+function $() {
+      for (i=1;i<Ptr.length+1;i++) { 
+      Ptr[i-1].className = (i%4>0)?"left":"right"; 
+      }
+}
+window.onload=$;
+//-->
+</script>
+ </xmp>
+
+</div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 title: 'OpenWrt安装Nginx并绑定域名访问NAS'
 description: 'OpenWrt上面安装Nginx并通过ddns-go把变化ipv6和Cloudflare上的域名绑定，从而公网访问NAS，路由器等内网穿透服务。'
 pubDate: 2025-08-22
-author: Wu
+author: WU
 cover: assets/cover.png
 recommend: true
 tags: ['OpenWrt', 'NAS', 'Nginx', 'DDNS-go', 'SSL']
