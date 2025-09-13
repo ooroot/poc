@@ -1,5 +1,5 @@
 ---
-title: tvbox资源
+title: TVbox资源
 description: 个人自用各种电视盒子资源集合
 pubDate: 2024-05-17
 cover: tv.jpg

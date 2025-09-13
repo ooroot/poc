@@ -2,6 +2,7 @@
 title: '双网关双dns'
 description: '双网关双dns，进行内外网各走一套'
 pubDate: 2024-10-11
+updatedDate: 2025-03-05
 cover: "network-services.jpeg"
 tags:
   - 网络
